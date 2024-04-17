@@ -13,6 +13,15 @@ public class Member {
 //    @Column(name = "username") // 컬럼명이 다르다면 이렇게 지정가능
     private String name;
 
+    //JPA사용시 기본생성자가 꼭필요
+    public Member() {
+    }
+
+    public Member(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }
